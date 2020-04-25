@@ -130,4 +130,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void menstr(View view) {
+        startActivity(new Intent(MainActivity.this, cycle.class));
+
+    }
+
 }
