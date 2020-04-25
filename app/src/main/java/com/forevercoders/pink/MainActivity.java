@@ -1,7 +1,9 @@
 package com.forevercoders.pink;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.View;
@@ -36,10 +38,11 @@ public class MainActivity extends AppCompatActivity {
         quotestxt.setText(randomName);
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
+
+
     }
 
     public void soshelp(View view) {
-        Toast.makeText(this, "SOS sent, Help is on way", Toast.LENGTH_LONG).show();
 
         try {
             mFusedLocationClient.getLastLocation().addOnSuccessListener(this, location -> {
@@ -47,17 +50,21 @@ public class MainActivity extends AppCompatActivity {
                     wayLatitude = location.getLatitude();
                     wayLongitude = location.getLongitude();
                     locURL = "https://maps.google.com/maps?q=" + wayLatitude + "," + wayLongitude;
-                    locationText = "HELP ME, I'm in danger !!!\n" + locURL;
-                    Log.i("loc", locURL);
+                    locationText = "HELP ME !!!\n" + locURL;
+                    Log.i("loc", locationText);
                 }
             });
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage("00916282649802", null, locationText, null, null);
-
+            Toast.makeText(this, "SOS sent, Help is on way", Toast.LENGTH_LONG).show();
+            Vibrator vb = (Vibrator)   getSystemService(Context.VIBRATOR_SERVICE);
+            vb.vibrate(100);
         } catch (Exception ex) {
-            Toast.makeText(getApplicationContext(), ex.getMessage().toString(),
+            Toast.makeText(getApplicationContext(), "TAP AGAIN TO CONFIRM",
                     Toast.LENGTH_LONG).show();
         }
 
     }
+
+
 }
