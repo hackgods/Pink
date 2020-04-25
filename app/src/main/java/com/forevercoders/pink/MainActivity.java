@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private String[] quotes;
     SharedPreferences sos;
     String locURL;
+    String usos;
     String locationText;
     double wayLatitude;
     double wayLongitude;
@@ -39,24 +40,25 @@ public class MainActivity extends AppCompatActivity {
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
 
-
     }
 
     public void soshelp(View view) {
 
         try {
             mFusedLocationClient.getLastLocation().addOnSuccessListener(this, location -> {
-                if (location != null) {
+                if (location != null ) {
                     wayLatitude = location.getLatitude();
                     wayLongitude = location.getLongitude();
                     locURL = "https://maps.google.com/maps?q=" + wayLatitude + "," + wayLongitude;
                     locationText = "HELP ME !!!\n" + locURL;
                     Log.i("loc", locationText);
+
+
                 }
             });
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage("00916282649802", null, locationText, null, null);
-            Toast.makeText(this, "SOS sent, Help is on way", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Check your SMS APP, Help is on way", Toast.LENGTH_LONG).show();
             Vibrator vb = (Vibrator)   getSystemService(Context.VIBRATOR_SERVICE);
             vb.vibrate(100);
         } catch (Exception ex) {
