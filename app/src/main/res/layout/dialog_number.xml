@@ -22,7 +22,7 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="0091XXXXXXXXXX"
-        android:inputType="textEmailAddress" />
+        android:inputType="number" />
 
 
     <Button
@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="@color/colorAccent"
+        android:background="#E91E63"
         android:text="Okay"
         android:textColor="@android:color/white" />
 </LinearLayout>
