@@ -41,7 +41,7 @@
         app:layout_constraintVertical_bias="0.105">
 
         <androidx.cardview.widget.CardView
-            android:layout_width="350dp"
+            android:layout_width="310dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
             app:cardBackgroundColor="#E91E63"
@@ -63,7 +63,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="350dp"
+            android:layout_width="310dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="7dp"
@@ -86,7 +86,7 @@
                 android:fontFamily="@font/product_sans_bold"
                 android:text="SOS ALERT !"
                 android:textColor="#F44336"
-                android:textSize="36sp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
     </LinearLayout>
