@@ -42,9 +42,23 @@
             android:layout_width="350dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
-            app:cardBackgroundColor="#FFFFFF"
+            app:cardBackgroundColor="#E91E63"
             app:cardCornerRadius="7dp"
-            app:cardElevation="3dp" />
+            app:cardElevation="3dp" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/playball"
+                android:gravity="center"
+                android:text="“Ah, women. They make the highs higher and the lows more frequent ”"
+                android:textColor="#D3FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+        </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="350dp"
