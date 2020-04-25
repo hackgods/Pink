@@ -10,4 +10,10 @@
         <item>“ You educate a man; you educate a man. You educate a woman; you educate a generation ”</item>
         <item>“ Above all, be the heroine of your life, not the victim ”</item>
     </string-array>
+
+    <string name="helpline">
+        POLICE \nFIRE\nAMBULANCE\nWOMEN LINE\nCHILD LINE</string>
+    <string name="help_number">100\n101\n102\n1091\n1098</string>
+
+
 </resources>
